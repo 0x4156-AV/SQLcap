@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title id="ttl">SQLMAP Web GUI</title>
+    <title id="ttl">SQLCAP</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/sqlmap/css/bootstrap.min.css">
@@ -10,5 +10,5 @@
     <script src="/sqlmap/js/bootstrap.min.js"></script>
     <script src="/sqlmap/js/sqlmap.js"></script>
   </head>
-  <body>
+  <body style="background-color=#191919;">
     <br />
