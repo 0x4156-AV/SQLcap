@@ -5,7 +5,7 @@
   $sess = session_id();                       // Current Session ID, use tbd...
 
   if($_SESSION['authenticated'] != true) {
-    header("Location: /sqlmap/admin/login.php");
+    header("Location: /SQLcap/admin/login.php");
   }
 
   // Establish Admin ID to manage tasks
@@ -58,11 +58,11 @@
     <title id="ttl">SQLMAP Web GUI - Admin Panel</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/sqlmap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/sqlmap/css/css.css">
+    <link rel="stylesheet" href="/SQLcap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/SQLcap/css/css.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="/sqlmap/js/bootstrap.min.js"></script>
-    <script src="/sqlmap/js/sqlmap.js"></script>
+    <script src="/SQLcap/js/bootstrap.min.js"></script>
+    <script src="/SQLcap/js/sqlmap.js"></script>
   </head>
   <body>
     <br />
@@ -94,7 +94,7 @@
         <div class="col-md-3"></div>
         <div class="col-md-6">
           <div class="epic_fail">[WARNING] '<?php echo htmlentities(trim($_SESSION['myAdminID']), ENT_QUOTES, 'UTF-8'); ?>' - Appears to be an Invalid Admin ID!</div><br />
-          <form class="form-horizontal" role="form" id="myAdminID" action="/sqlmap/admin/index.php" method="POST">
+          <form class="form-horizontal" role="form" id="myAdminID" action="/SQLcap/admin/index.php" method="POST">
             <input type="hidden" name="token" value="<?php echo $token; ?>"> 
             <input type="text" name="myAdminID" class="form-control" placeholder="78203fa6630db256fcd7f57ea8420eb8" required autofocus><br />
             <input type="submit" class="btn" name="submit" value="Set Admin ID"/>
@@ -162,15 +162,15 @@
                             } else {
                               echo "<td> - </td>";
                             }
-                            echo "<td> <a href=\"/sqlmap/admin/index.php?task=" . htmlentities($t, ENT_QUOTES, 'UTF-8') . "&action=conf\" target=\"_blank\">Conf</a> </td>";
+                            echo "<td> <a href=\"/SQLcap/admin/index.php?task=" . htmlentities($t, ENT_QUOTES, 'UTF-8') . "&action=conf\" target=\"_blank\">Conf</a> </td>";
                             if($status['status'] == 'running') {
-                              echo "<td> <a href=\"/sqlmap/admin/index.php?task=" . htmlentities($t, ENT_QUOTES, 'UTF-8') . "&action=stop\">Stop</a> </td>";
-                              echo "<td> <a href=\"/sqlmap/admin/index.php?task=" . htmlentities($t, ENT_QUOTES, 'UTF-8') . "&action=kill\">Kill</a> </td>";
+                              echo "<td> <a href=\"/SQLcap/admin/index.php?task=" . htmlentities($t, ENT_QUOTES, 'UTF-8') . "&action=stop\">Stop</a> </td>";
+                              echo "<td> <a href=\"/SQLcap/admin/index.php?task=" . htmlentities($t, ENT_QUOTES, 'UTF-8') . "&action=kill\">Kill</a> </td>";
                             } else {
                               echo "<td> - </td>";
                               echo "<td> - </td>";
                             }
-                            echo "<td> <a href=\"/sqlmap/admin/index.php?task=" . htmlentities($t, ENT_QUOTES, 'UTF-8') . "&action=del\">Del</a> </td>";
+                            echo "<td> <a href=\"/SQLcap/admin/index.php?task=" . htmlentities($t, ENT_QUOTES, 'UTF-8') . "&action=del\">Del</a> </td>";
                           echo "</tr>";
                         }
                       ?>
@@ -198,7 +198,7 @@
         <div class="col-md-3"></div>
         <div class="col-md-6">
           <div class="epic_fail">[WARNING] NO Admin ID Set!</div><br />
-          <form class="form-horizontal" role="form" id="myAdminID" action="/sqlmap/admin/index.php" method="POST">
+          <form class="form-horizontal" role="form" id="myAdminID" action="/SQLcap/admin/index.php" method="POST">
             <input type="hidden" name="token" value="<?php echo $token; ?>"> 
             <input type="text" name="myAdminID" class="form-control" placeholder="78203fa6630db256fcd7f57ea8420eb8" required autofocus><br />
             <input type="submit" class="btn" name="submit" value="Set Admin ID"/>
@@ -214,7 +214,7 @@
 
     <br /><br /><br />
     <div class="footer" align="center">
-        <a href="/sqlmap/admin/logout.php">Logout</a><br />
+        <a href="/SQLcap/admin/logout.php">Logout</a><br />
         Want to learn more about <a href="http://sqlmap.org/" target="_blank">SQLMAP</a>, Visit the <a href="http://sqlmap.org/" target="_blank">Project Page!</a><br/>
         SQLMAP Web Operator Copyright &#0169; 2015, Coded By: HR, All rights reserved.<br/>
     </div>
