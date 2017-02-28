@@ -4,7 +4,7 @@
   @session_start();
   $sess = session_id();
   if(!$sess) {
-    header("Location: /sqlmap/index.php");
+    header("Location: /SQLcap/index.php");
   }
   include_once("header.php"); 
 
